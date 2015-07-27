@@ -39,7 +39,7 @@ public class TennisScoring {
         return false;
     }
     
-    void displayState() {        
+    void displayScore() {        
         
         if (state_d == 4 && state_f == 3) {
                 System.out.println("Advantage D");
@@ -57,11 +57,11 @@ public class TennisScoring {
         Scanner scanner=new Scanner(System.in);
         String input=scanner.next();
         TennisScoring score=new TennisScoring();
-        score.displayState();
+        score.displayScore();
         for(int i=0;i<input.length();i++)
         {
             score.nextState(input.charAt(i));
-            score.displayState();
+            score.displayScore();
         }       
        
     }
