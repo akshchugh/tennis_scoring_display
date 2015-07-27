@@ -73,7 +73,7 @@ public class TennisScoring {
             score.nextState(input.charAt(i));
             score.displayState();
         }       
-        score.displayState();
+        
     }
     
 }
