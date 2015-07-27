@@ -39,4 +39,14 @@ class TennisScoring {
 	{
 		//computes the next point score
 	}
+	static boolean gameOver()
+	{
+		if ( state_f < 4 && state_d < 4) {
+			return false;
+		}
+		if ( Math.abs (state_f - state_d) >= 2) {
+			return true;
+		}
+		return false;
+	}
 }
