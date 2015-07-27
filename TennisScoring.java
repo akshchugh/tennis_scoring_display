@@ -51,7 +51,12 @@ class TennisScoring {
 		if ( state_f < 4 && state_d < 4) {
 			return false;
 		}
-		if ( Math.abs (state_f - state_d) >= 2) {
+		if ( state_f - state_d >= 2) {
+			System.out.print ("F won the game ");
+			return true;
+		}
+		else if ( state_d - state_f >=2) {
+			System.out.print ("D won the game ");
 			return true;
 		}
 		return false;
