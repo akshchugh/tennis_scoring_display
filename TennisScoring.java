@@ -32,19 +32,16 @@ class TennisScoring {
 	{
 		if(gameOver()){
 			state_d = 0;
-			state_e =0;
+			state_f =0;
 		}
-		if (state_d == 3 && state_e == 3){
-			System.out.println("deuce");
-		}
-		else if (state_d == 4 && state_e == 3) {
+		else if (state_d == 4 && state_f == 3) {
 			System.out.println("Advantage D");
 		}
-		else if (state_d == 3 && state_e == 4) {
+		else if (state_d == 3 && state_f == 4) {
 			System.out.println("Advantage F");
 		}
 		else {
-			System.out.println( "D : " + scoreMap[state_d] + "E : " + scoreMap[state_e])
+			System.out.println( "D : " + scoreMap[state_d] + "\t F : " + scoreMap[state_f]);
 		}
 	}
 	
