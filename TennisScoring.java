@@ -2,7 +2,20 @@ class TennisScoring {
 	private int state_d,state_f;
 	private int[] scoreMap = {0, 15, 30, 40};
 	
-	static void nextState(char point)
+	public static void main(String[] args) {
+        // TODO code application logic here
+        
+        String input="dddd";
+        TennisScoring s=new TennisScoring();
+        
+        s.displayState();
+        for(int i=0;i<input.length();i++)
+        {
+        s.nextState(input.charAt(i));
+        s.displayState();
+        }
+	
+	public void nextState(char point)
 	{
 		if((state_d==4)&&(state_f==4))
             {
@@ -35,10 +48,7 @@ class TennisScoring {
 		}
 	}
 	
-	static void nextState(char point)
-	{
-		//computes the next point score
-	}
+	
 	static boolean gameOver()
 	{
 		if ( state_f < 4 && state_d < 4) {
@@ -49,4 +59,6 @@ class TennisScoring {
 		}
 		return false;
 	}
+	
+	
 }
